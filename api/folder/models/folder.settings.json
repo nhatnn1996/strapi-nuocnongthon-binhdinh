@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "folders",
+  "info": {
+    "name": "folder",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "folders": {
+      "collection": "folder",
+      "via": "folder"
+    },
+    "folder": {
+      "model": "folder",
+      "via": "folders"
+    },
+    "temps": {
+      "collection": "temp"
+    }
+  }
+}

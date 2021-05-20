@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "temps",
+  "info": {
+    "name": "temp",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desciption": {
+      "type": "text"
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "folder": {
+      "model": "folder"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}
