@@ -32,17 +32,8 @@
       "type": "uid",
       "targetField": "name"
     },
-    "categories": {
-      "collection": "category",
-      "via": "category"
-    },
     "category": {
-      "model": "category",
-      "via": "categories"
-    },
-    "posts": {
-      "via": "categories",
-      "collection": "posts"
+      "model": "category"
     }
   }
 }

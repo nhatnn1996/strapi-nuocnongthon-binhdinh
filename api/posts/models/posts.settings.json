@@ -55,10 +55,8 @@
       "type": "uid",
       "targetField": "title"
     },
-    "categories": {
-      "collection": "category",
-      "via": "posts",
-      "dominant": true
+    "category": {
+      "model": "category"
     }
   }
 }
